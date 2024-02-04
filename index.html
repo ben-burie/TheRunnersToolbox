@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pace Calculator</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <header>
+        <img src="assets/logov5.gif" alt="logo">
+        <nav>
+            <a href="#createWorkout">Workout Creator</a>
+            <a href="#paceCalculator">Pace Calculator</a>
+            <a href="#paceCalculator">Distance Conversion</a>
+            <a href="#pacePercentage">Pace Percentage Calculator</a>
+            <a href="#hrCalculator">Heart Rate Calculator</a>
+            <a href="#racePredictor">Race Prediction</a>
+        </nav>
+    </header>
+    <body>
+        <div id="info">
+            <h2>Welcome to The Runners Toolbox</h2>
+            <p>Your one stop shop for all things running! Browse our services below!</p>
+            <div id="services">
+                <div id="createService">
+                    <img src="assets/pencilv7.gif" alt="create">
+                    <h3>Workout Creation</h3>
+                    <p>
+                        We offer a top notch workout creater for distance <br> track athletes. Users can enter their personal records <br> to base
+                        their workouts off of. We offer complete <br> customization for the workout itself! See below.
+                    </p>
+                </div>
+                <div id="calculateService">
+                    <img src="assets/calculatorv6.gif" alt="calculator">
+                    <h3>Running Calculators</h3>
+                    <p>
+                        Here on our site, we house many different running <br> calculators! Whether you want to find your tempo pace, <br> or you want to know 
+                        your heart rate zones, we got the <br> calculator for you! Browse our options below!
+                    </p>
+                </div>
+                <div id="raceService">
+                    <img src="assets/watchv2.gif" alt="stopwatch">
+                    <h3>Race Prediction</h3>
+                    <p>
+                        We can help you predict your upcoming race finish time <br> using Riegels Formula! Even if you have never run it before, <br> we can use 
+                        race times from a different event you've ran! <br> Try it out below!
+                    </p>
+                </div>
+                <br><br>
+                <h2>Everything you need to thrive as a runner lies below! Go check it out!</h2>
+            </div>
+        </div>
+        </div>
+        <div id="createWorkout">
+            <h2 id="createTitle">Interval Workout Creator</h2>
+            <div id="statsDiv">
+                <h2>Your Stats</h2>
+                <h4><i>Enter the event you would like to base your workout</i></h4>
+                <form id="stats" onsubmit="return false;">
+                    <label for="event">Event: </label>
+                    <select id="event" name="event">
+                        <option value="800">800m</option>
+                        <option value="1500">1500m</option>
+                        <option value="1600">1600m</option>
+                        <option value="3000">3000m</option>
+                        <option value="3200">3200m</option>
+                        <option value="5000">5000m</option>
+                    </select>
+                    <br><br>
+                    <label>Best Time: </label>
+                    <input type="number" id="minutes" min="1" max="59" placeholder="Min" required>
+                    <input type="number" id="seconds" min="0" max="59" placeholder="Sec" required>
+                    <br><br>
+                    <button type="button" id="save" onclick="saveStats()">Save</button>
+                    <button type="button" id="clear" onclick="clearStats()">Clear</button>
+                </form>
+                <p id="output">You Must Enter Your Stats!</p>
+            </div>
+            <div id="workout">
+                <h2>Create Workout</h2>
+                <form id="rowCountForm" onsubmit="return false;">
+                    <label for="intervals">Number of Intervals: </label>
+                    <input type="number" id="rowCount" min="1" max="20" placeholder="0" required>
+                    <button type="buttom" id="create" onclick="generateTable()">Create</button>
+                </form>
+                <p id="confirmation"></p>
+            </div>
+            <div id="workoutTable">
+                <h2 id="tableHeader"></h2>
+                <div id="tableContainer"></div>
+            </div>
+        </div>
+        <div class="section">
+            <h2 id="calculatorHeader">Running Calculators</h2>
+            <div id="paceCalculator"></div>
+            <div class="calculator">
+                <h2>Simple Pace Calculator</h2>
+                <form id="simplePaceCalculator">
+                    <label id="field1">Time:</label>
+                    <input type="text" id="field1Input"  placeholder="hh:mm:ss" required>
+                    <label id="field3"></label>
+                    <br><br>
+                    <label id="field2">Distance:</label>
+                    <input type="text" id="field2Input" placeholder="miles" required>
+                    <label id="field 4"></label>
+                    <br><br>
+                    <button type="button" id="submitPace" onclick="paceCalculate()">Calculate</button>
+                </form>
+                <p id="paceCalculated">0:00</p>
+            </div>
+            <div class="output">
+                <h2>Distance Conversion</h2>
+                <form id="distanceConversion">
+                    <label>Conversion Type:</label>
+                    <select id="conversion" name="conversion">
+                        <option value="kmToMi">Kilometers to Miles</option>
+                        <option value="miToKm">Miles to Kilometers</option>
+                        <option value="kmToMe">Kilometers to Meters</option>
+                        <option value="meToKm">Meters to Kilometers</option>
+                    </select>
+                    <br><br>
+                    <label>Distance: </label>
+                    <input type="number" id="measurmentInput" required>
+                    <br><br>
+                    <button type="button" id="convert" onclick="distanceConversion()">Convert</button>
+                </form>
+                <p id="measurmentOutput"></p>
+            </div>
+        </div>
+        <div class="section">
+            <div id="pacePercentage"></div>
+            <div class="calculator">
+                <h2>Pace Percentage Calculator</h2>
+                <form id="milepace" onsubmit="return false;">
+                    <label>Mile Best:</label>
+                    <input type="number" id="mileMin" min="1" max="59" placeholder="Min" required>
+                    <input type="number" id="mileSec" min="0" max="59" placeholder="Sec" required>
+                    <br><br>
+                    <label>Percentage:</label>
+                    <input type="number" id="milePercent" min="1" max="100" placeholder="0" required>
+                    <label>%</label>
+                    <br><br>
+                    <button type="button" id="calculate" onclick="mileCalculate()">Calculate</button>
+                </form>
+                <p id="mileCalculated">0:00</p>
+            </div>
+            <div class="output">
+                <h2>Type Of Run Reference Table</h2>
+                <table>
+                    <tr>
+                        <th>Type</th>
+                        <th>Percentage</th>
+                    </tr>
+                    <tr>
+                        <td>Recovery</td>
+                        <td>65-75%</td>
+                    </tr>
+                    <tr>
+                        <td>Tempo</td>
+                        <td>80%-85%</td>
+                    </tr>
+                    <tr>
+                        <td>Threshold</td>
+                        <td>90-95%</td>
+                    </tr>
+                    <tr>
+                        <td>Max</td>
+                        <td>95-100%</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="section">
+            <div id="hrCalculator"></div>
+            <div class="calculator">
+                <h2>HR Zone Estimation Calculator</h2>
+                <form id="hrZone">
+                    <label>Age:</label>
+                    <input type="number" id="age" min="1" max="100" placeholder="" required>
+                    <br><br>
+                    <button type="button" id="calculate" onclick="hrCalculate()">Calculate</button>
+                </form>
+                <p id="hrCalculatedHeader">Max Heart Rate:</p>
+                <p id="hrCalculated">0 BPM</p>
+            </div>
+            <div class="output">
+                <h2>Estimated HR Zones</h2>
+                <table>
+                    <tr>
+                        <td>Zone</td>
+                        <td>Heart Rate</td>
+                    </tr>
+                    <tr>
+                        <td>Z1</td>
+                        <td id="z1Hr"></td>
+                    </tr>
+                    <tr>
+                        <td>Z2</td>
+                        <td id="z2Hr"></td>
+                    </tr>
+                    <tr>
+                        <td>Z3</td>
+                        <td id="z3Hr"></td>
+                    </tr>
+                    <tr>
+                        <td>Z4</td>
+                        <td id="z4Hr"></td>
+                    </tr>
+                    <tr>
+                        <td>Z5</td>
+                        <td id="z5Hr"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="section">
+            <div id="racePredictor"></div>
+            <h2 id="predictorHeader">Race Finish Time Predictor</h2>
+            <div class="calculator">
+                <h2>Get Your Prediction Here</h2>
+                <form id="predictor">
+                    <label>Recent Race Time:</label>
+                    <input type="text" id="t1" placeholder="hh:mm:ss" required>
+                    <br><br>
+                    <label>Distance for That Race:</label>
+                    <input type="number" id="d1" placeholder="0" required>
+                    <label>miles</label>
+                    <br><br>
+                    <label>Upcoming Race Distance:</label>
+                    <input type="number" id="d2" placeholder="0" required>
+                    <label>miles</label>
+                    <br><br>
+                    <button type="button" id="predictorSubmit" onclick="predictionSubmit()">Submit</button>
+                    <button type="button" id="clear" onclick="clearPredictions()">Clear</button>
+                </form>
+                <p id="predictionHeader">Upcoming Race Finish Time Prediction:</p>
+                <p id="predictionOutput"></p>
+            </div>
+            <div class="output">
+                <h2>How is the Prediction Calculated?</h2>
+                <p>The finish time prediction is calculated using Riegel's formula. <br> The formula was published in 1977 by an American research engineer <br>
+                named Peter Riegel. The formula can be seen below.</p>
+                <p id="formula">T2 = T1(D2/D1)^1.06</p>
+                <p>Where:<br><br>
+                    T1 = Completed Race Time <br>
+                    D1 = Completed Race Distance <br>
+                    T2 = Prediction Race Time <br>
+                    D2 = Prediction Race Distance
+                </p>
+            </div>
+        </div>
+        <footer>
+            <h4>The Runners Toolbox was created by Ben Burie ------- Feb 2024</h4>
+        </footer>
+        <script src="scripts/createWorkout.js" defer></script>
+        <script src="scripts/calculators.js"></script>
+        <script src="scripts/prediction.js"></script>
+    </body>
+</html>

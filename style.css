@@ -1,0 +1,324 @@
+html {
+    background: rgb(49,135,170);
+    background: linear-gradient(80deg, rgba(49,135,170,1) 0%, rgba(50,25,109,1) 100%);
+}
+
+header {
+    text-align: center;
+    color: white;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 50px;
+    border-bottom: 1px solid white;
+}
+
+nav {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #ffffff00;
+    border: 1px solid white;
+    border-radius: 10px;
+    transition: background-color 0.2s ease-in;
+}
+
+nav a:hover {
+    color: black;
+    background-color: white;
+}
+
+.section {
+    width: 81.5%;
+    margin-left: 9%;
+    margin-bottom: 30px;
+    margin-top: 100px;
+}
+
+#info {
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 120px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#info h2 {
+    font-size: 30px;
+}
+
+#services {
+    margin-top: 50px;
+}
+
+#createService {
+    margin-left: 50px;
+}
+
+#createService, #calculateService {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 80px;
+}
+
+#raceService {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+.calculator {
+    text-align: center;
+    margin-left: 9%;
+    width: 40%;
+    color: white;
+    display: inline-block;
+    vertical-align: baseline;
+    height: 340px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.output {
+    width: 40%;
+    display: inline-block;
+    height: 340px;
+    margin-left: 0%;
+    vertical-align: top;
+    text-align: center;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#distanceConversion input {
+    width: 80px;
+}
+
+#field1Input, #field2Input {
+    width: 80px;
+}
+
+#percentageTable td {
+    text-align: center;
+}
+
+#calculatorHeader, #predictorHeader {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 40px;
+}
+
+#percentage p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#statsDiv h2 {
+    padding-top: -10px;
+}
+
+#createWorkout {
+    border: 1px solid white;
+    width: 81.5%;
+    margin-left: 9%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+#createTitle {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 40px;
+}
+
+#statsDiv {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    width: 40%;
+    align-items: center;
+    margin: auto;
+    display: inline-block;
+    vertical-align: baseline;
+    margin-left: 9%;
+}
+
+#workout {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: white;
+    width: 40%;
+    display: inline-block;
+    margin-left: 0%;
+    height: 337px;
+    vertical-align: top;
+}
+
+#workoutTable {
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 30px;
+}
+
+#workoutTable h2 {
+    text-align: center;
+}
+
+#mileCalculated, #hrCalculated, #paceCalculated, #measurmentOutput, #predictionOutput {
+    border: 1px solid white;
+    border-radius: 10px;
+    height: 50px;
+    width: 50%;
+    margin-left: 25%;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+#hrCalculated {
+    margin-top: 0px;
+}
+
+#predictionOutput {
+    margin-top: 0px;
+}
+
+#formula {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#hrCalculatedHeader, #predictionHeader {
+    font-size: 20px;
+}
+
+#output {
+    height: 30px;
+}
+
+#minutes, #seconds {
+    width: 50px;
+}
+
+#intervals {
+    width: 50px;
+}
+
+#save {
+    margin-bottom: 15px;
+}
+
+#calculate1 {
+    width: 700px;
+}
+
+#save, #create, .calculate, #calculate, #clear, #submitPace, #convert, #predictorSubmit {
+    background-color: #ffffff00;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    transition: background-color 1s;
+}
+
+#save:hover, #create:hover, .calculate:hover, #calculate:hover, #clear:hover, #submitPace:hover, #convert:hover, #predictorSubmit:hover {
+    background-color: #ffffff40;
+    transition: background-color 1s;
+    cursor: pointer;
+}
+
+#rowCount {
+    width: 30px;
+}
+
+#middle {
+    width: 60%;
+}
+
+#t1, #d1, #d2 {
+    width: 80px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+select {
+    height: 30px;
+    border: 1px solid white;
+    background-color: #ffffff00;
+    color: white;
+    height: 30px;
+}
+
+option {
+    color: black;
+}
+
+input {
+    background-color: #ffffff00;
+    border: 1px solid white;
+    color: white;
+    height: 33.1px;
+}
+
+::placeholder {
+    color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #ffffff00;
+    text-align: center;
+}
+
+table form {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+table form input {
+    width: 50px;
+    background-color: #ffffff00;
+    border: 1px solid white;
+    color: white;
+}
+
+table form p {
+    display: inline-block;
+    margin-left: 5px;
+    margin-right: 20px;
+}
+
+table #col1 {
+    text-align: center;
+}
+
+footer {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    margin-top: 500px;
+}
