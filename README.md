@@ -1,5 +1,5 @@
 # The Runners Toolbox
-Web application that provides a variety of services for runners
+Web application that provides a variety of services for runners <br>
 NOTE: Website is best viewed on a computer
 
 <h2>Features</h2>
