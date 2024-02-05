@@ -1,5 +1,5 @@
-# TheRunnersToolbox
-Web application that provides a variety of services for runners
+# The Runners Toolbox
+<h2>Web application that provides a variety of services for runners</h2>
 
 
 CUSTOM WORKOUT CREATION
