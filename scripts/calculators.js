@@ -37,8 +37,8 @@ function paceCalculate() {
     newSeconds = newSeconds - (newMinutes * 60) - (newHours * 3600);
     newSeconds = Math.floor(newSeconds);    
 
-    if (newHours=== 0) {
-        if (seconds < 10) {
+    if (newHours === 0) {
+        if (newSeconds < 10) {
             paceCalculated.textContent = `${newMinutes}:0${newSeconds}`;
         }
         else {
