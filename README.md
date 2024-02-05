@@ -1,5 +1,6 @@
 # The Runners Toolbox
 Web application that provides a variety of services for runners
+NOTE: Website is best viewed on a computer
 
 <h2>Features</h2>
 <p>Custom Workout Creation</p>
