@@ -2,6 +2,9 @@
 Web application that provides a variety of services for runners <br>
 NOTE: Website is best viewed on a computer
 
+View website in your browser:
+<a href="https://ben-burie.github.io/TheRunnersToolbox/">The Runners Toolbox</a>
+
 <h2>How To Use</h2>
 <p>For each service avalible for use, input your information in the correct input fields. Your output will appear below the input area.</p>
 <p>For the workout creator, you must input your state before creating a workout</p>
